@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jklae.stylepick.Activity.SignUpActivity"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <ImageView
+                    android:id="@+id/profile_img"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/img_profile_addition"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerCrop"
+                    android:onClick="addingProfile"/>
+                <ImageView
+                    android:id="@+id/edit_profile_img"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginLeft="73dp"
+                    android:visibility="gone"
+                    android:src="@drawable/img_camera"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="15dp">
+                <TextView
+                    android:id="@+id/id1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="아이디"
+                    android:textColor="#000000"
+                    android:textSize="16sp"/>
+                <EditText
+                    android:id="@+id/id2"
+                    android:layout_below="@+id/id1"
+                    android:layout_width="370dp"
+                    android:layout_height="wrap_content"
+                    android:hint="5~12자 영문 또는 숫자" />
+                <TextView
+                    android:id="@+id/exception_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/id2"
+                    android:visibility="gone"
+                    android:textColor="#FF0000"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="15dp">
+                <TextView
+                    android:id="@+id/pw1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="비밀번호"
+                    android:textColor="#000000"
+                    android:textSize="16sp"/>
+                <EditText
+                    android:id="@+id/pw2"
+                    android:layout_below="@+id/pw1"
+                    android:layout_width="370dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:hint="6~16자 영문과 숫자 조합"/>
+                <TextView
+                    android:id="@+id/exception_pw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pw2"
+                    android:visibility="gone"
+                    android:textColor="#FF0000"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="15dp">
+                <TextView
+                    android:id="@+id/check_pw1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="비밀번호 확인"
+                    android:textColor="#000000"
+                    android:textSize="16sp"/>
+                <EditText
+                    android:id="@+id/check_pw2"
+                    android:layout_below="@id/check_pw1"
+                    android:layout_width="370dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="15dp">
+                <TextView
+                    android:id="@+id/email1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="이메일"
+                    android:textColor="#000000"
+                    android:textSize="16sp"/>
+                <EditText
+                    android:id="@+id/email2"
+                    android:layout_below="@id/email1"
+                    android:layout_width="370dp"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/exception_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/email2"
+                    android:visibility="gone"
+                    android:textColor="#FF0000"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="15dp">
+                <TextView
+                    android:id="@+id/nick_name1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="닉네임"
+                    android:textColor="#000000"
+                    android:textSize="16sp"/>
+                <EditText
+                    android:id="@+id/nick_name2"
+                    android:layout_below="@+id/nick_name1"
+                    android:layout_width="370dp"
+                    android:layout_height="wrap_content"
+                    android:hint="한글 2~8자, 영문 4~16자 이내"/>
+                <TextView
+                    android:id="@+id/exception_nickName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nick_name2"
+                    android:visibility="gone"
+                    android:textColor="#FF0000"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <Button
+                    android:layout_width="430dp"
+                    android:layout_height="match_parent"
+                    android:text="가입완료"
+                    android:onClick="completeSignUp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
